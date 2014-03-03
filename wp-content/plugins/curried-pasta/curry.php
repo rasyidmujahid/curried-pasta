@@ -26,20 +26,9 @@ class Curry {
 
     public function shortcode($atts) {
         extract(shortcode_atts(array(
-            'id'     => false,
-
-            // dimensions
-            'width'    => ! empty( $content_width ) ? $content_width : '100%',
-            'height'   => 300,   // default height is set to 300
-
-            // only for documents
-            'seamless' => 1,  // if set to 'true', this will not show the Google Docs header / footer.
-                              // if set to 'false', this will show the Google Docs header / footer.
-
-            // only for presentations
-            'size'     => false, // preset presentation size, either 'small', 'medium' or 'large';
-                                 // preset dimensions are as follows: small (480x389), medium (960x749), large (1440x1109)
-                                 // to set custom size, set the 'width' and 'height' params instead
+            'id' => false,
+            'width' => ! empty( $content_width ) ? $content_width : '100%',
+            'height' => 300
         ), $atts));
 
         $htmls = [];
@@ -50,33 +39,36 @@ class Curry {
         
         $args_json = file_get_contents($url);
 
-        $forms = $this->get_doc_args(json_decode($args_json, true));
-        foreach ($forms as $input) {
-            $htmls[] = $input;
-        }
+        $htmls[] = $this->get_doc_fields(json_decode($args_json, true));
 
-        $htmls[] = $this->get_embedded_doc($id, $width, $height, $seamless, $size);
+        $htmls[] = $this->get_embedded_doc($id, $width, $height);
 
         return apply_filters('gdoc_output', implode("\n", $htmls));
     }
 
-    public function get_doc_args($fields)
+    public function get_doc_fields($fields)
     {
-        $htmls = [];
-        $htmls[] = '<form id="doc_param">';
+        $inputs = [];
         foreach ($fields as $field) {
-            $htmls[] = $this->new_text_field($field['tag_string'], $this->underscored($field['tag_id']));
+            $inputs[] = $this->new_text_field($field['tag_string'], $this->underscored($field['tag_id']));
         }
-        $htmls[] = '</form>';
+        $inputs = implode("\n", $inputs);
+
+        $htmls = <<<EOD
+            <form id="doc_param" method="post" action="#" onsubmit="">
+            {$inputs}
+            <input type="submit" value="Print" />
+            </form>
+EOD;
         return $htmls;
     }
 
     public function new_text_field($title, $id)
     {
-        return '<span>'. $title .'</span><input type="text" id='. $id .'/><br/>';
+        return '<div style="display: block"><label for="'. $id .'" class>'. $title .'</label><input type="text" id='. $id .'/><div>';
     }
 
-    public function get_embedded_doc($id, $width, $height, $seamless, $size)
+    public function get_embedded_doc($id, $width, $height)
     {
         if (!$id) return;
 
@@ -84,7 +76,7 @@ class Curry {
         // $output = '<iframe src="https://docs.google.com/file/d/' . $id .'/preview" width="' . $width . '" height="'. $height .'"></iframe>';
 
         # google doc preview
-        $output = '<iframe src="https://docs.google.com/document/d/' . $id . '/preview?embedded=false" width="' . $width . 
+        $output = '<iframe src="https://docs.google.com/document/d/' . $id . '/preview?embedded=true" width="' . $width . 
             '" height="'. $height .'"></iframe>';
 
         # google doc viewer
