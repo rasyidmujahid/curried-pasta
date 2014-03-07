@@ -4,10 +4,10 @@
 //   'create' to build and produce a Google document
 // 2. gid, Google doc ID
 function doGet(e) {
-//  var method = e.parameter.method;
-//  var gDocId = e.parameter.gid;
-  var method = 'create';
-  var gDocId = '1LCxqRRPChqg0zAnYnzhA36gR7ndAg1_M23nQH0XVCGM';
+  var method = e.parameter.method;
+  var gDocId = e.parameter.gid;
+//  var method = 'create';
+//  var gDocId = '1LCxqRRPChqg0zAnYnzhA36gR7ndAg1_M23nQH0XVCGM';
   
   Logger.log("Accessing file id %s", gDocId);
   Logger.log("Method %s", method);
@@ -15,12 +15,8 @@ function doGet(e) {
   
   if (method === 'open') {
     return open(gDocId);
-  }
-  else if (method === 'create') {
-    data = {
-      
-    };
-    return createCopy(gDocId, data);
+  } else if (method === 'create') {
+    return createCopy(gDocId, e.parameter);
   }
 }
 
@@ -36,14 +32,12 @@ function open(gDocId) {
   return json;
 }
 
-function doPost(e) {
-  var gDocId = e.parameter.gid;
-  
-  for (key in e.parameter) {
-    Logger.log(key + ": " + e.parameter[key]);
-  }
-  return ContentService.createTextOutput("User says: " + JSON.stringify(e)).setMimeType(ContentService.MimeType.JSON);
-}
+//function doPost(e) {
+//  var gDocId = e.parameter.gid;
+//  createCopy(gDocId, e.parameter);
+//  
+//  return ContentService.createTextOutput("User says: " + JSON.stringify(e)).setMimeType(ContentService.MimeType.JSON);
+//}
 
 function createCopy(gDocId, data) {
   // 1. duplicate doc
@@ -53,6 +47,8 @@ function createCopy(gDocId, data) {
   
   var originalDoc = DocsList.getFileById(gDocId);  
   var newFileName = originalDoc.getName().replace('Template ', '') + '.' + moment().format('YYYYMMDDHHmmss');
+  
+  Logger.log("create new file name " + newFileName);
 
   var historyFolder;  
   var folders = DriveApp.getFoldersByName('History');
@@ -64,7 +60,17 @@ function createCopy(gDocId, data) {
   var workingDoc = templateDoc.makeCopy(newFileName, historyFolder);
   var document = DocumentApp.openById(workingDoc.getId());
   var body = document.getBody();
-  body.replaceText(searchPattern, replacement);
+  
+  for (key in data) {
+    if (key === 'callback' || key === '_' || key === 'gid' || key === 'method') continue;
+    var search = "\\$\\{" + key.toUpperCase().replace(/_/g,' ') + "\\}";
+    var element = body.replaceText(search, data[key]);
+    Logger.log(element.asText().getText());
+  }
+  
+  document.saveAndClose();
+  
+  return ContentService.createTextOutput(data.callback + "(" + JSON.stringify(data) + ")").setMimeType(ContentService.MimeType.JSON);
 }
 
 function extractDocArgs(content) {

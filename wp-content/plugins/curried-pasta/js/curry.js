@@ -1,6 +1,25 @@
-function print(google_doc_id) {
-  var method = 'create';
-  var url = "https://script.google.com/macros/s/AKfycbzggDVc5GFSNttaMkYU6pi8iy88exVSTiwyrKvwrr2nCj7m0rM/exec?method=" + method + "&gid=" + google_doc_id;
-  
-  return false;
-}
+jQuery(document).ready(function() {
+
+    jQuery("#doc_param").submit(function(event) {
+        event.preventDefault();
+        var url = 'https://script.google.com/macros/s/AKfycbw6in0T7QsKHxJxgc5XJxNAy2XzHMGzfzfJBbatMDI/dev?method=create&';
+        url += jQuery(this).serialize();
+        console.log("URL : " + url);
+        var settings = {
+            url: url,
+            dataType: "jsonp",
+            success: function(json) {
+                alert("Success");
+                console.log("success : ");
+                for (key in json) {
+                    console.log(key + ' : ' + json[key]);
+                }
+            },
+            error: function() {
+                alert("Error");
+            }
+        };
+        jQuery.ajax(settings);
+    });
+
+});

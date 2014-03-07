@@ -20,6 +20,14 @@ class Curry {
         // $this->plugin_path = dirname(__FILE__);
         // $this->plugin_url = WP_PLUGIN_URL . '/curried-pasta';
         // wp_enqueue_script('curry_js', plugins_url('js/curry.js', __FILE__));
+
+        wp_enqueue_script("jquery");
+        
+        wp_register_style('purecss', 'http://yui.yahooapis.com/pure/0.4.2/pure-min.css');
+        wp_enqueue_style('purecss'); 
+
+        wp_register_script('curryjs', plugins_url('/curried-pasta/js/curry.js'));
+        wp_enqueue_script('curryjs');
         
         add_shortcode('gdoc', array($this, 'shortcode'));
     }
@@ -39,25 +47,30 @@ class Curry {
         
         $args_json = file_get_contents($url);
 
-        $htmls[] = $this->get_doc_fields(json_decode($args_json, true));
+        $htmls[] = $this->get_doc_fields($google_doc_id, json_decode($args_json, true));
 
         $htmls[] = $this->get_embedded_doc($id, $width, $height);
 
         return apply_filters('gdoc_output', implode("\n", $htmls));
     }
 
-    public function get_doc_fields($fields)
+    public function get_doc_fields($google_doc_id, $fields)
     {
         $inputs = [];
         foreach ($fields as $field) {
-            $inputs[] = $this->new_text_field($field['tag_string'], $this->underscored($field['tag_id']));
+            $inputs[] = $this->new_text_field(ucwords(strtolower($field['tag_string'])), $this->underscored($field['tag_id']));
         }
         $inputs = implode("\n", $inputs);
 
         $htmls = <<<EOD
-            <form id="doc_param" method="post" action="#" onsubmit="">
-            {$inputs}
-            <input type="submit" value="Print" />
+            <form id="doc_param" method="post" class="pure-form pure-form-aligned">
+                <fieldset>
+                <input type="hidden" name="gid" id="gid" value="$google_doc_id"/>
+                $inputs
+                <div class="pure-controls">
+                    <button type="submit" class="pure-button pure-button-primary">Cetak</button>
+                </div>
+                </fieldset>
             </form>
 EOD;
         return $htmls;
@@ -65,7 +78,11 @@ EOD;
 
     public function new_text_field($title, $id)
     {
-        return '<div style="display: block"><label for="'. $id .'" class>'. $title .'</label><input type="text" id='. $id .'/><div>';
+        return <<<EOD
+        <div class="pure-control-group">
+            <label for=$id>$title</label><input type="text" id=$id name=$id placeholder="$title"/>
+        </div>
+EOD;
     }
 
     public function get_embedded_doc($id, $width, $height)
