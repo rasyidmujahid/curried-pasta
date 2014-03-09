@@ -4,12 +4,14 @@ jQuery(document).ready(function() {
         event.preventDefault();
         var url = 'https://script.google.com/macros/s/AKfycbw6in0T7QsKHxJxgc5XJxNAy2XzHMGzfzfJBbatMDI/dev?method=create&';
         url += jQuery(this).serialize();
-        console.log("URL : " + url);
+        // console.log("URL : " + url);
 
         css_load(true);
 
+        // jQuery("#curry-button-submit").remove();
         jQuery("#curry-button-submit").addClass("pure-button-disabled");
         jQuery("#curry-button-submit").attr('disabled', 'disabled');
+        jQuery("#curry-button-submit").text("Loading..");
 
         var download_link = jQuery("#curry-link-pdf");
         var cetak_button = jQuery("#curry-button-cetak");
@@ -22,31 +24,37 @@ jQuery(document).ready(function() {
             url: url,
             dataType: "jsonp",
             success: function(json) {
-                alert("Success");
-                console.log("success : ");
-                console.log(json);
+                // console.log("success : ");
+                // console.log(json);
 
-                jQuery("#curry-embedded-doc").src = json.embed + "?embedded=true";
+                jQuery("#curry-embedded-doc")[0].src = json.embed + "?embedded=true";
 
-                var ahref_pdf = '<a id="curry-link-pdf" href="' + json.pdf + '" class="pure-button">PDF</a>';
-                var button_cetak_pdf = '<a id="curry-button-cetak" class="pure-button" onclick="cetak()">Cetak</a>';
+                var ahref_pdf = '<a id="curry-link-pdf" class="pure-button pure-button-primary">Download PDF</a>';
+                // var button_cetak_pdf = '<a id="curry-button-cetak" class="pure-button pure-button-primary">Cetak</a>';
                 jQuery("#curry-button").append(ahref_pdf);
-                jQuery("#curry-button").append(button_cetak_pdf);
+                // jQuery("#curry-button").append(button_cetak_pdf);
 
-                jQuery("#curry-button-cetak").click(function() {
-                    alert("cetak");
-                    jQuery("#curry-embedded-doc").focus();
-                    jQuery("#curry-embedded-doc").contentWindow.print();
+                jQuery("#curry-link-pdf").click(function() {
+                    window.open(json.pdf);
                 });
 
-                jQuery("#curry-button-submit").removeClass("pure-button-disabled");
-                jQuery("#curry-button-submit").removeAttr('disabled');
+                jQuery("#curry-button-cetak").click(function() {
+                    jQuery("#curry-embedded-doc")[0].focus();
+                    jQuery("#curry-embedded-doc")[0].contentWindow.print();
+
+                    // var cetak_window = window.open(json.embed);
+                });
+
+                jQuery("#curry-button-submit").remove();
+                // jQuery("#curry-button-submit").removeClass("pure-button-disabled");
+                // jQuery("#curry-button-submit").removeAttr('disabled');
                 css_load(false);
             },
             error: function() {
                 alert("Error");
-                jQuery("#curry-button-submit").removeClass("pure-button-disabled");
-                jQuery("#curry-button-submit").removeAttr('disabled');
+                jQuery("#curry-button-submit").remove();
+                // jQuery("#curry-button-submit").removeClass("pure-button-disabled");
+                // jQuery("#curry-button-submit").removeAttr('disabled');
                 css_load(false);
             }
         };
@@ -75,44 +83,6 @@ jQuery(document).ready(function() {
         alert("cetak");
         jQuery("#curry-embedded-doc").focus();
         jQuery("#curry-embedded-doc").contentWindow.print();
-    }
-
-    function print_pdf(argument) {
-        var pdf = new PdfUtil(PDF_URL);
-        pdf.display(document.getElementById('placeholder'));
-
-        document.getElementById('printBtn').onclick = function() {
-            pdf.print();
-        }
-    }
-
-    function PdfUtil(url) {
-
-        var iframe;
-
-        var __construct = function(url) {
-            iframe = getContentIframe(url);
-        }
-
-        var getContentIframe = function(url) {
-            var iframe = document.createElement('iframe');
-            iframe.src = url;
-            return iframe;
-        }
-
-        this.display = function(parentDomElement) {
-            parentDomElement.appendChild(iframe);
-        }
-
-        this.print = function() {
-            try {
-                iframe.contentWindow.print();
-            } catch (e) {
-                throw new Error("Printing failed.");
-            }
-        }
-
-        __construct(url);
     }
 
 });

@@ -4,10 +4,17 @@
 //   'create' to build and produce a Google document
 // 2. gid, Google doc ID
 function doGet(e) {
+  if (!e) {
+    e = {
+      parameter: {
+        method: "create",
+        gid: '1LCxqRRPChqg0zAnYnzhA36gR7ndAg1_M23nQH0XVCGM',
+        nama_perusahaan: 'PLN'
+      }
+    };
+  }
   var method = e.parameter.method;
   var gDocId = e.parameter.gid;
-//  var method = 'create';
-//  var gDocId = '1LCxqRRPChqg0zAnYnzhA36gR7ndAg1_M23nQH0XVCGM';
   
   Logger.log("Accessing file id %s", gDocId);
   Logger.log("Method %s", method);
@@ -31,13 +38,6 @@ function open(gDocId) {
   Logger.log("JSON %s", json);
   return json;
 }
-
-//function doPost(e) {
-//  var gDocId = e.parameter.gid;
-//  createCopy(gDocId, e.parameter);
-//  
-//  return ContentService.createTextOutput("User says: " + JSON.stringify(e)).setMimeType(ContentService.MimeType.JSON);
-//}
 
 function createCopy(gDocId, data) {
   // 1. duplicate doc
@@ -68,13 +68,20 @@ function createCopy(gDocId, data) {
   }
   
   document.saveAndClose();
-//  workingDoc.setSharing(DriveApp.Access.ANYONE, DriveApp.Permission.VIEW);
+  workingDoc.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
     
+  authorize();
   var apiKey = 'AIzaSyDsLzopZdS7r57cQmyF9u7cNkUn6eXrEz4';
-  var driveGetUrl = 'https://www.googleapis.com/drive/v2/files/' + gDocId + '?key=' + apiKey;
+  var driveGetUrl = 'https://www.googleapis.com/drive/v2/files/' + workingDoc.getId() + '?key=' + apiKey;
   
-  var response = UrlFetchApp.fetch(driveGetUrl);
-  Logger.log(response['exportLinks']['application/pdf');
+  var driveResponse = UrlFetchApp.fetch(driveGetUrl);
+  var driveGetJson = JSON.parse(driveResponse);
+  var response = {
+    pdf: driveGetJson["exportLinks"]["application/pdf"],
+    embed: driveGetJson["embedLink"]
+  };
+  
+  Logger.log(response);
   
   return ContentService.createTextOutput(data.callback + "(" + JSON.stringify(response) + ")").setMimeType(ContentService.MimeType.JSON);
 }
@@ -92,4 +99,14 @@ function extractDocArgs(content) {
     tag = regex.exec(content);
   }
   return params;
+}
+
+function authorize() {
+  var oauthConfig = UrlFetchApp.addOAuthService("drive");
+  var scope = "https://www.googleapis.com/auth/drive";
+  oauthConfig.setConsumerKey("anonymous");
+  oauthConfig.setConsumerSecret("anonymous");
+  oauthConfig.setRequestTokenUrl("https://www.google.com/accounts/OAuthGetRequestToken?scope="+scope);
+  oauthConfig.setAuthorizationUrl("https://accounts.google.com/OAuthAuthorizeToken");    
+  oauthConfig.setAccessTokenUrl("https://www.google.com/accounts/OAuthGetAccessToken");  
 }
