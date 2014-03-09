@@ -22,9 +22,13 @@ class Curry {
         // wp_enqueue_script('curry_js', plugins_url('js/curry.js', __FILE__));
 
         wp_enqueue_script("jquery");
+        wp_enqueue_script("jqueryui");
         
         wp_register_style('purecss', 'http://yui.yahooapis.com/pure/0.4.2/pure-min.css');
         wp_enqueue_style('purecss'); 
+
+        wp_register_style('cssload', plugins_url('/curried-pasta/css/cssload.css'));
+        wp_enqueue_style('cssload'); 
 
         wp_register_script('curryjs', plugins_url('/curried-pasta/js/curry.js'));
         wp_enqueue_script('curryjs');
@@ -67,8 +71,8 @@ class Curry {
                 <fieldset>
                 <input type="hidden" name="gid" id="gid" value="$google_doc_id"/>
                 $inputs
-                <div class="pure-controls">
-                    <button type="submit" class="pure-button pure-button-primary">Cetak</button>
+                <div id="curry-button" class="pure-controls">
+                    <button id="curry-button-submit" type="submit" class="pure-button pure-button-primary">Submit</button>
                 </div>
                 </fieldset>
             </form>
@@ -93,7 +97,7 @@ EOD;
         // $output = '<iframe src="https://docs.google.com/file/d/' . $id .'/preview" width="' . $width . '" height="'. $height .'"></iframe>';
 
         # google doc preview
-        $output = '<iframe src="https://docs.google.com/document/d/' . $id . '/preview?embedded=true" width="' . $width . 
+        $output = '<iframe id="curry-embedded-doc" src="https://docs.google.com/document/d/' . $id . '/preview?embedded=true" width="' . $width . 
             '" height="'. $height .'"></iframe>';
 
         # google doc viewer

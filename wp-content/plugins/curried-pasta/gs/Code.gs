@@ -65,12 +65,18 @@ function createCopy(gDocId, data) {
     if (key === 'callback' || key === '_' || key === 'gid' || key === 'method') continue;
     var search = "\\$\\{" + key.toUpperCase().replace(/_/g,' ') + "\\}";
     var element = body.replaceText(search, data[key]);
-    Logger.log(element.asText().getText());
   }
   
   document.saveAndClose();
+//  workingDoc.setSharing(DriveApp.Access.ANYONE, DriveApp.Permission.VIEW);
+    
+  var apiKey = 'AIzaSyDsLzopZdS7r57cQmyF9u7cNkUn6eXrEz4';
+  var driveGetUrl = 'https://www.googleapis.com/drive/v2/files/' + gDocId + '?key=' + apiKey;
   
-  return ContentService.createTextOutput(data.callback + "(" + JSON.stringify(data) + ")").setMimeType(ContentService.MimeType.JSON);
+  var response = UrlFetchApp.fetch(driveGetUrl);
+  Logger.log(response['exportLinks']['application/pdf');
+  
+  return ContentService.createTextOutput(data.callback + "(" + JSON.stringify(response) + ")").setMimeType(ContentService.MimeType.JSON);
 }
 
 function extractDocArgs(content) {
@@ -86,7 +92,4 @@ function extractDocArgs(content) {
     tag = regex.exec(content);
   }
   return params;
-}
-
-function data() {
 }
