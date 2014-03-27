@@ -1,8 +1,10 @@
 /*
-!.gitignore
 !/wp-content
 /wp-content/*
 !/wp-content/plugins
 /wp-content/plugins/*
 !/wp-content/plugins/curried-pasta
+!/wp-content/themes
+/wp-content/themes/*
+!/wp-content/themes/curried-pasta
 wp-content/plugins/curried-pasta/.DS_Store
