@@ -43,7 +43,7 @@ class Curry {
             'height' => 300
         ), $atts));
 
-        $htmls = [];
+        $htmls = array();
 
         $method = 'open';
         $google_doc_id = '1LCxqRRPChqg0zAnYnzhA36gR7ndAg1_M23nQH0XVCGM';
@@ -60,7 +60,7 @@ class Curry {
 
     public function get_doc_fields($google_doc_id, $fields)
     {
-        $inputs = [];
+        $inputs = array();
         foreach ($fields as $field) {
             $inputs[] = $this->new_text_field(ucwords(strtolower($field['tag_string'])), $this->underscored($field['tag_id']));
         }
