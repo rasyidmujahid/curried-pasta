@@ -4,7 +4,7 @@
     	<div id="slide-wrap">
         	<?php 
                 $args = array(
-                    'posts_per_page' => 10,
+                    'posts_per_page' => 5,
 					'post_status' => 'publish',
                     'post__in' => get_option("sticky_posts"),
                     'category__not_in' => 29
