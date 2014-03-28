@@ -7,4 +7,4 @@
 !/wp-content/themes
 /wp-content/themes/*
 !/wp-content/themes/curried-pasta
-wp-content/plugins/curried-pasta/.DS_Store
+!/wp-content/themes/the-newswire
