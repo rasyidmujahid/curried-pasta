@@ -6,12 +6,14 @@
                 $args = array(
                     'posts_per_page' => 10,
 					'post_status' => 'publish',
-                    'post__in' => get_option("sticky_posts")
+                    'post__in' => get_option("sticky_posts"),
+                    'category__not_in' => 29
                 );
                 $fPosts = new WP_Query( $args );
 				$countPosts = $fPosts->found_posts;
               ?>
 			  
+			<?php if ( is_home() ) { query_posts($query_string . '&cat=-29'); } ?>
 			<?php if ( $fPosts->have_posts() ) : ?>
             
             <div id="load-cycle"></div>
