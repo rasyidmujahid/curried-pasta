@@ -1,0 +1,332 @@
+::selection {
+	background: #a16b36;
+	color: #fff;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #a16b36;
+	color: #fff;
+	text-shadow: none;
+}
+
+
+/**** Background Colors ****/
+body,
+.lightBtn {
+  background-color: #efefef;
+}
+
+.main-slideshow,
+.widget-item,
+.widget-main,
+.box-content-inner,
+.page-title,
+.grid-event-header,
+.load-more-btn,
+.event-container,
+.gallery-content,
+.blog-post-inner,
+.prev-next-post a,
+#blog-author,
+.widget-main-title,
+.blog-comments-content,
+.contact-page-content,
+.contact-map,
+.course-details,
+#disqus_thread {
+  background-color: white;
+}
+
+.menu-toggle-btn {
+  background-color: #ffcc33;
+}
+
+.search-form form input {
+  background-color: #a16b36;
+}
+
+.responsive_menu {
+  background-color: #bf8040;
+}
+
+.slider-caption,
+.cat-blog,
+.blog-post-meta ul li {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mainBtn,
+.request-information .submit_field .mainBtn,
+.tag-items a,
+.footer-widget .tagcloud a,
+.sidebar .tagcloud a,
+.site-header,
+.main-menu li ul,
+.social_icons li a,
+.footer-media-icons li a,
+.flex-direction-nav a {
+  background-color: #996633;
+}
+
+.main-navigation,
+.site-footer {
+  background-color: #ac7339;
+}
+
+
+blockquote,
+.calendar-small,
+.course-list > dt:nth-child(odd),
+.tab-content > .tab-pane {
+  background-color: #f3f3f3;
+}
+
+.s-month,
+#slider-testimonials .prev,
+#slider-testimonials .next,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background-color: #c4884c;
+}
+
+/**** Text Colors ****/
+.main-menu li.active a,
+.social-icons li a:hover,
+.site-footer a:hover,
+.event-container .event-time {
+  color: #ffcc33;
+}
+
+.main-menu li.active .sub-menu a:hover,
+.main-menu li a:hover,
+.social-icons li a,
+.social_icons li a,
+.slider-caption h2 a,
+.flex-direction-nav a,
+.footer-widget-title,
+.footer-media-icons li a,
+.mainBtn,
+.request-information .submit_field .mainBtn,
+.s-month,
+#slider-testimonials .prev,
+#slider-testimonials .next,
+.blog-grid-thumb .cat-blog,
+.blog-post-meta ul li,
+.blog-post-meta ul li a,
+.tag-items a,
+.comment-form .mainBtn,
+.course-search-form .mainBtn,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a,
+.course-post .mainBtn:hover,
+.tag-items a:hover {
+  color: white;
+}
+
+body,
+.blog-list-meta a,
+.event-small-meta,
+.blog-grid-meta a,
+.lightBtn,
+.lightBtn:hover,
+.blog-categories ul li a,
+.comment-form label,
+.course-search-form label {
+  color: #666666;
+}
+
+.menu-toggle-btn,
+.menu-toggle-btn:hover {
+  color: #996633;
+}
+
+.main-menu a,
+.main-menu li.active .sub-menu a,
+.main-menu li ul li:before,
+.site-header,
+.site-header a,
+.responsive_menu a,
+.responsive_menu a:hover {
+  color: #dfbf9f;
+}
+
+.site-header a:hover {
+  color: #cc9966;
+}
+
+.small-links li:not(:last-child):after,
+.flex-direction-nav a:hover {
+  color: #c68c53;
+}
+
+.site-footer {
+  color: #dfbf9f;
+}
+
+.site-footer a {
+  color: #ecd9c6;
+}
+
+.footer-nav li:not(:first-child):before {
+  color: #d0a171;
+}
+
+.bottom-footer p.small-text {
+  color: #dfbf9f;
+}
+
+a,
+blockquote h5,
+.blog-categories ul li a:hover,
+.author-name a,
+.author-name a:hover {
+  color: #c4884c;
+}
+
+a:hover {
+  color: #a66f37;
+}
+
+h1, h2, h3, h4, h5, h6,
+.dark-text,
+.page-title a,
+.s-date,
+.load-more-btn a,
+.mixitup-controls .active,
+.prev-next-post a {
+  color: #282a2c;
+}
+
+.small-text,
+.page-active,
+.request-information input,
+.input-select select,
+.event-contact ul li,
+.comment-form input,
+.comment-form textarea
+.contact-form input,
+.contact-form textarea,
+.course-search-form input,
+.course-search-form select {
+  color: #999999;
+}
+
+.page-title h6:not(:first-child):before {
+  color: #cccccc;
+}
+
+/**** Border Colors ****/
+.widget-main-title,
+blockquote,
+.request-information input,
+.input-select select,
+.blog-list-post,
+.event-small-list,
+.prof-list-item,
+.grid-event-header,
+.load-more-btn,
+.search-form-widget input,
+.prev-next-post .whiteBtn,
+.blog-comments-content .media,
+.comment-form input,
+.comment-form textarea,
+.contact-form input,
+.contact-form textarea,
+.course-search-form input,
+.course-search-form select {
+  border-color: #d5dbe0 !important;
+}
+
+.search-form form input,
+.main-navigation,
+.main-menu li {
+  border-color: #bf8040;
+}
+
+.main-menu li ul li {
+  border-color: #ac7339;
+}
+
+body,
+.main-menu li ul,
+.tab-content > .tab-pane {
+  border-color: #ffcc33;
+}
+
+.site-header,
+.site-footer {
+  border-color: #d5d5d5;
+}
+
+.bottom-footer {
+  border-color: #996633;
+}
+
+.course-list dt,
+.course-list dt:last-of-type {
+  border-color: #e7eaed;
+}
+
+.main_menu li,
+.main_menu {
+  border-color: #cc9966 !important;
+}
+
+/* WP Specific */
+.current_page_item a {
+	color: #ffcc33;	
+}
+.sticky .blog-grid-item .box-content-inner {
+		background-color: #ac7339!important;
+}
+
+.sticky .blog-grid-item .box-content-inner .blog-grid-title a {
+	color: #fff;
+}
+
+.sticky .blog-grid-item .box-content-inner .small-text {
+	color: #dfbf9f;
+}
+
+.sticky .blog-grid-item .box-content-inner .small-text a {
+	color: #ecd9c6;
+}
+
+.paging-navigation .page-numbers {
+	background-color: #c4884c;
+}
+
+.paging-navigation .page-numbers:hover,
+.paging-navigation .page-numbers.current,
+.footer-widget .calendar-small .s-month {
+	background-color: #996633;
+}
+
+.sidebar .widget-main ul li a:hover,
+.footer-widget .calendar-small {
+	color: #c4884c;
+}
+
+.footer-widget .event-small-list,
+.footer-widget .blog-list-post {
+	border-color: #996633!important;
+}
+
+.footer-widget .small-text {
+	color: #dfbf9f!important;
+}
+
+.sidebar .tagcloud a,
+.footer-widget .tagcloud a {
+	 background-color: #996633;	
+}
+
+
+.mainBtn, .request-information .submit_field .mainBtn, .mc_signup_submit .button {
+	  background-color: #996633;
+}
+

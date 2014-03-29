@@ -1,0 +1,17 @@
+/*--
+	Theme Name: Universe
+	Theme URI: http://
+	Author: PlugThemes
+	Author URI: http://
+	Description: A Theme for College and Education
+	Version: 1.0
+	Tags: responsive-layout, theme-options, left-sidebar, right-sidebar
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+--*/
+
+
+
+@import "core/css/misc.css";
+@import "core/css/main.css";
+@import "core/css/responsive.css";

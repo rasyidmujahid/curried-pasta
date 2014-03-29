@@ -1,0 +1,61 @@
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus {
+	border: none;
+	@include radius(0);
+	margin: 0;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 15px;
+}
+
+.nav-tabs > li {
+	margin: 0;
+	padding: 0;
+}
+
+.nav-tabs {
+	border: 0;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.nav-tabs > li > a:hover {
+	border: none;
+}
+
+.nav-tabs > li > a {
+	@include radius(0);
+	margin: 0;
+	padding: 0;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 15px;
+}
+
+.tab-content > .tab-pane {
+	padding: 20px;
+	border-top: 2px solid;
+}
+
+.panel-group .panel {
+	@include radius(0);
+	border: 0;
+}
+
+.panel-group .panel-heading + .panel-collapse .panel-body {
+	border: 0;
+}
+
+.panel-collapse {
+	padding: 0 10px;
+}
+
+.alert {
+	@include radius(0);
+	padding: 10px 15px;
+}
+
+.progress {
+	@include radius(0);
+}

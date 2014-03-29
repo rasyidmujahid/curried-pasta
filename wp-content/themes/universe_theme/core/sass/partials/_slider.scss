@@ -1,0 +1,49 @@
+.main-slideshow {
+	padding: 6px;
+}
+
+.slider-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	h2 {
+		margin: 0 0 7px 0;
+		line-height: 20px;
+		a {
+			margin: 0;
+			font-size: 20px;
+			font-weight: 600;
+		}
+	}
+	p {
+		margin: 0;
+		color: #a7aaac;
+	}
+}
+
+.flexslider {
+	position: relative;
+    height: 392px;
+	img {
+		width: 100%;
+		overflow: hidden;
+		min-height: 100%;
+		height: auto;
+		height: 100%;
+	}
+}
+
+.flex-direction-nav {
+	position: absolute;
+	right: 36px;
+}
+
+.flex-direction-nav a {
+	width: 36px;
+	height: 36px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	line-height: 36px;
+	font-size: 16px;
+}

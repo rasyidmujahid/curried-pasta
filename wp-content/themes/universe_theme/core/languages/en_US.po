@@ -1,0 +1,1567 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: universe\n"
+"POT-Creation-Date: 2014-03-11 01:41-0300\n"
+"PO-Revision-Date: 2014-03-11 01:42-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: C:\\xampp\\htdocs\\plugthemes\\wp-content\\themes"
+"\\universe_theme\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:24
+msgid "Not Found."
+msgstr ""
+
+#: admin/includes/class-options-framework-admin.php:85
+#: admin/includes/class-options-framework-admin.php:86
+#: admin/includes/class-options-framework-admin.php:307
+msgid "Theme Options"
+msgstr ""
+
+#: admin/includes/class-options-framework-admin.php:174
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: admin/includes/class-options-framework-admin.php:205
+msgid "Default options restored."
+msgstr ""
+
+#: admin/includes/class-options-framework-admin.php:259
+msgid "Options saved."
+msgstr ""
+
+#: admin/includes/class-options-media-uploader.php:63
+msgid "No file chosen"
+msgstr ""
+
+#: admin/includes/class-options-media-uploader.php:66
+#: admin/includes/class-options-media-uploader.php:119
+msgid "Upload"
+msgstr ""
+
+#: admin/includes/class-options-media-uploader.php:68
+#: admin/includes/class-options-media-uploader.php:120
+msgid "Remove"
+msgstr ""
+
+#: admin/includes/class-options-media-uploader.php:71
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: admin/includes/class-options-media-uploader.php:95
+msgid "View File"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:243
+msgid "No Repeat"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:244
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:245
+msgid "Repeat Vertically"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:246
+msgid "Repeat All"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:259
+msgid "Top Left"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:260
+msgid "Top Center"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:261
+msgid "Top Right"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:262
+msgid "Middle Left"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:263
+msgid "Middle Center"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:264
+msgid "Middle Right"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:265
+msgid "Bottom Left"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:266
+msgid "Bottom Center"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:267
+msgid "Bottom Right"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:280
+msgid "Scroll Normally"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:281
+msgid "Fixed in Place"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:357
+msgid "Normal"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:358
+msgid "Italic"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:359
+msgid "Bold"
+msgstr ""
+
+#: admin/includes/class-options-sanitization.php:360
+msgid "Bold Italic"
+msgstr ""
+
+#: comments.php:12 comments_backup.php:12
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:60 comments_backup.php:60
+msgid "Leave a comment"
+msgstr ""
+
+#: comments.php:60 comments_backup.php:60
+msgid "Leave a comment to "
+msgstr ""
+
+#: comments.php:62 comments_backup.php:62
+msgid "Cancel reply"
+msgstr ""
+
+#: comments.php:68 comments_backup.php:68
+msgid "You must be"
+msgstr ""
+
+#: comments.php:68 comments_backup.php:68
+msgid "logged in"
+msgstr ""
+
+#: comments.php:68 comments_backup.php:68
+msgid " to post a comment."
+msgstr ""
+
+#: comments.php:72 comments_backup.php:72
+msgid "Logged in as"
+msgstr ""
+
+#: comments.php:72 comments_backup.php:72
+msgid "Log out"
+msgstr ""
+
+#: comments.php:77 comments_backup.php:77
+msgid "Your Name:"
+msgstr ""
+
+#: comments.php:83 comments_backup.php:83
+msgid "Email Address:"
+msgstr ""
+
+#: comments.php:89 comments_backup.php:89
+msgid "Your Website:"
+msgstr ""
+
+#: comments.php:98 comments_backup.php:98
+msgid "Your Comment:"
+msgstr ""
+
+#: comments.php:105 comments_backup.php:105
+msgid "Submit Comment"
+msgstr ""
+
+#: core/includes/back-compat.php:41 core/includes/back-compat.php:53
+#: core/includes/back-compat.php:68
+#, php-format
+msgid ""
+"Universe requires at least WordPress version 3.6. You are running version "
+"%s. Please upgrade and try again."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:164
+#: core/includes/register-plugins.php:92
+msgid "Install Required Plugins"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:165
+#: core/includes/register-plugins.php:93
+msgid "Install Plugins"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:166
+#: core/includes/register-plugins.php:94
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:167
+msgid "Something went wrong."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:178
+#: core/includes/class-tgm-plugin-activation.php:490
+#: core/includes/register-plugins.php:106
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:179
+#: core/includes/class-tgm-plugin-activation.php:1846
+#: core/includes/register-plugins.php:107
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:180
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:517
+#: core/includes/class-tgm-plugin-activation.php:2058
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:545
+#, php-format
+msgid "The following plugin was activated successfully: %s."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:704
+msgid "Dismiss this notice"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1091
+msgid "External Link"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1096
+msgid "Private Repository"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1099
+msgid "Pre-Packaged"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1103
+msgid "WordPress Repository"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1106
+msgid "Required"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1106
+msgid "Recommended"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1109
+msgid "Not Installed"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1111
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1281
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1297
+msgid "Plugin"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1298
+msgid "Source"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1299
+msgid "Type"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1300
+msgid "Status"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1318
+msgid "Install"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1319
+msgid "Activate"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1829
+msgid "Install package not available."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1830
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1831
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1832
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1833
+msgid "Plugin install failed."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1834
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1845
+msgid "Plugin activation failed."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1955
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1956
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1956
+#: core/includes/class-tgm-plugin-activation.php:1965
+msgid "Show Details"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1956
+#: core/includes/class-tgm-plugin-activation.php:1965
+msgid "Hide Details"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1957
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1958
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1962
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1963
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1964
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1965
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1966
+msgid "All installations have been completed."
+msgstr ""
+
+#: core/includes/class-tgm-plugin-activation.php:1967
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: core/includes/index-loadmore.php:16
+msgid "Click here to load more"
+msgstr ""
+
+#: core/includes/meta/courses-meta.php:9
+msgid "Courses Additional Info"
+msgstr ""
+
+#: core/includes/meta/courses-meta.php:15
+msgid "Course Avaliable?"
+msgstr ""
+
+#: core/includes/meta/courses-meta.php:16
+msgid "Choose a course status."
+msgstr ""
+
+#: core/includes/meta/courses-meta.php:21
+msgid "New Course"
+msgstr ""
+
+#: core/includes/meta/courses-meta.php:22
+msgid "Not Avaliable"
+msgstr ""
+
+#: core/includes/meta/courses-meta.php:27
+msgid "Courses Discounts"
+msgstr ""
+
+#: core/includes/meta/courses-meta.php:28
+msgid "Enter percentage discount for this course. "
+msgstr ""
+
+#: core/includes/meta/courses-meta.php:56
+msgid "Please fill additional fields for courses."
+msgstr ""
+
+#: core/includes/meta/events-meta.php:9
+msgid "Events Options"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:15
+msgid "Event Month"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:16
+msgid "Choose the event month "
+msgstr ""
+
+#: core/includes/meta/events-meta.php:19
+msgid "January"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:20
+msgid "February"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:21
+msgid "March"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:22
+msgid "April"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:23
+msgid "May"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:24
+msgid "June"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:25
+msgid "July"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:26
+msgid "August"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:27
+msgid "September"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:28
+msgid "October"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:29
+msgid "November"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:30
+msgid "December"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:34
+msgid "Event Day"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:35
+msgid "Choose the event day. "
+msgstr ""
+
+#: core/includes/meta/events-meta.php:73
+msgid "Event Year"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:74
+msgid "Enter the event year using this format <em>0000.</em>"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:80
+msgid "Event Time"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:81
+msgid ""
+"Enter the event time using this format <em>00:00AM/PM to 00:00AM/PM.</em>"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:87
+msgid "Event Location"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:88
+msgid "Enter the event location, example: <em>Cramton Auditorium.</em>"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:94
+msgid "Event City"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:95
+msgid "Enter the city of the event, example: <em>London.</em>"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:101
+msgid "Event Zip Code"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:102
+msgid "Enter the address zip code, example: <em>10308 89.</em>"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:108
+msgid "Event Country"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:109
+msgid "Enter the event country, example: <em>United Kingdom.</em>"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:115
+msgid "Event Phone"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:116
+msgid "Enter the phone info, example: <em>+44 (0)20 7040 8037.</em>"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:123
+msgid "Event Map Latitude"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:124
+msgid ""
+"Enter the google map longitude information, example: <em>-12.8809532.</em>"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:130
+msgid "Event Map Longitude"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:131
+msgid ""
+"Enter the google map longitude information, example: <em>-38.4174871.</em>"
+msgstr ""
+
+#: core/includes/meta/events-meta.php:158
+msgid "Please fill additional fields for events."
+msgstr ""
+
+#: core/includes/meta/professors-meta.php:9
+msgid "Professors Options"
+msgstr ""
+
+#: core/includes/meta/professors-meta.php:15
+#: core/includes/meta/testimonials-meta.php:15
+msgid "Name"
+msgstr ""
+
+#: core/includes/meta/professors-meta.php:16
+msgid "Type professor's name. "
+msgstr ""
+
+#: core/includes/meta/professors-meta.php:22
+msgid "Professor Subject"
+msgstr ""
+
+#: core/includes/meta/professors-meta.php:23
+msgid "Type professor's subject."
+msgstr ""
+
+#: core/includes/meta/professors-meta.php:29
+#: core/includes/meta/testimonials-meta.php:29
+msgid "Info"
+msgstr ""
+
+#: core/includes/meta/professors-meta.php:30
+msgid "Type professor's additional info."
+msgstr ""
+
+#: core/includes/meta/professors-meta.php:56
+msgid "Please fill additional fields for professors."
+msgstr ""
+
+#: core/includes/meta/slider-meta.php:9
+msgid "Slide Options"
+msgstr ""
+
+#: core/includes/meta/slider-meta.php:15
+msgid "Caption"
+msgstr ""
+
+#: core/includes/meta/slider-meta.php:16
+msgid "Input your caption for slide (HTML tags are allowed). "
+msgstr ""
+
+#: core/includes/meta/slider-meta.php:43
+msgid ""
+"Please fill additional fields for slide. For better results upload an image "
+"with minimum size of 770x400. "
+msgstr ""
+
+#: core/includes/meta/testimonials-meta.php:9
+msgid "Testimonials Options"
+msgstr ""
+
+#: core/includes/meta/testimonials-meta.php:16
+msgid "Type author's name. "
+msgstr ""
+
+#: core/includes/meta/testimonials-meta.php:22
+msgid "URL"
+msgstr ""
+
+#: core/includes/meta/testimonials-meta.php:23
+msgid "Type author's URL."
+msgstr ""
+
+#: core/includes/meta/testimonials-meta.php:30
+msgid "Type author's additional info."
+msgstr ""
+
+#: core/includes/meta/testimonials-meta.php:56
+msgid "Please fill additional fields for testimonials."
+msgstr ""
+
+#: core/includes/register-plugins.php:95
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: core/includes/register-plugins.php:108
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: core/includes/shortcodes/tinymce/dialog.php:23
+msgid "Shortcode Options"
+msgstr ""
+
+#: core/includes/sidebar-init.php:6
+msgid "Sidebar"
+msgstr ""
+
+#: core/includes/sidebar-init.php:8
+msgid "Located at the left/right side of pages."
+msgstr ""
+
+#: core/includes/sidebar-init.php:19 core/includes/sidebar-init.php:29
+#: core/includes/sidebar-init.php:39 core/includes/sidebar-init.php:49
+#: core/includes/sidebar-init.php:59
+msgid "Located at the bottom of pages."
+msgstr ""
+
+#: core/includes/sidebar-init.php:70
+msgid "Located on the bottom left side of the homepage."
+msgstr ""
+
+#: core/includes/sidebar-init.php:81
+msgid "Located on the bottom right side of the homepage."
+msgstr ""
+
+#: core/includes/theme-function.php:18
+msgid "Thumbnail"
+msgstr ""
+
+#: core/includes/theme-function.php:43
+msgid "None"
+msgstr ""
+
+#: core/includes/theme-function.php:74
+msgid "Type Course Title in Here"
+msgstr ""
+
+#: core/includes/theme-function.php:79
+msgid "Campus:"
+msgstr ""
+
+#: core/includes/theme-function.php:87
+msgid "Discipline:"
+msgstr ""
+
+#: core/includes/theme-function.php:95
+msgid "Study Level:"
+msgstr ""
+
+#: core/includes/theme-function.php:103
+msgid "Submit Search"
+msgstr ""
+
+#: core/includes/theme-function.php:143
+msgid "<i class=\"fa fa-angle-left\"></i>"
+msgstr ""
+
+#: core/includes/theme-function.php:144
+msgid "<i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: core/includes/theme-function.php:160
+msgid "Page"
+msgstr ""
+
+#: core/includes/theme-function.php:160
+msgid "of"
+msgstr ""
+
+#: core/includes/theme-init.php:49
+msgid "Slides"
+msgstr ""
+
+#: core/includes/theme-init.php:50
+msgid "Slide"
+msgstr ""
+
+#: core/includes/theme-init.php:51
+msgid "Search Slides"
+msgstr ""
+
+#: core/includes/theme-init.php:52
+msgid "All Slides"
+msgstr ""
+
+#: core/includes/theme-init.php:53
+msgid "Parent Slide"
+msgstr ""
+
+#: core/includes/theme-init.php:54
+msgid "Edit Slide"
+msgstr ""
+
+#: core/includes/theme-init.php:55
+msgid "Update Slide"
+msgstr ""
+
+#: core/includes/theme-init.php:56
+msgid "Add New Slide"
+msgstr ""
+
+#: core/includes/theme-init.php:57 core/includes/theme-init.php:62
+msgid "Home Slides"
+msgstr ""
+
+#: core/includes/theme-init.php:97 core/includes/theme-init.php:105
+#: core/includes/theme-init.php:110
+msgid "Events"
+msgstr ""
+
+#: core/includes/theme-init.php:98
+msgid "Event"
+msgstr ""
+
+#: core/includes/theme-init.php:99
+msgid "Search Events"
+msgstr ""
+
+#: core/includes/theme-init.php:100
+msgid "All Events"
+msgstr ""
+
+#: core/includes/theme-init.php:101
+msgid "Parent Event"
+msgstr ""
+
+#: core/includes/theme-init.php:102
+msgid "Edit Event"
+msgstr ""
+
+#: core/includes/theme-init.php:103
+msgid "Update Event"
+msgstr ""
+
+#: core/includes/theme-init.php:104
+msgid "Add New Event"
+msgstr ""
+
+#: core/includes/theme-init.php:148 core/includes/theme-init.php:156
+#: core/includes/theme-init.php:161
+msgid "Courses"
+msgstr ""
+
+#: core/includes/theme-init.php:149
+msgid "Course"
+msgstr ""
+
+#: core/includes/theme-init.php:150
+msgid "Search Courses"
+msgstr ""
+
+#: core/includes/theme-init.php:151
+msgid "All Courses"
+msgstr ""
+
+#: core/includes/theme-init.php:152
+msgid "Parent Course"
+msgstr ""
+
+#: core/includes/theme-init.php:153 core/includes/theme-init.php:362
+msgid "Edit Course"
+msgstr ""
+
+#: core/includes/theme-init.php:154
+msgid "Update Course"
+msgstr ""
+
+#: core/includes/theme-init.php:155
+msgid "Add New Course"
+msgstr ""
+
+#: core/includes/theme-init.php:192 core/includes/theme-init.php:200
+msgid "Courses Disciplines"
+msgstr ""
+
+#: core/includes/theme-init.php:193
+msgid "Course Discipline"
+msgstr ""
+
+#: core/includes/theme-init.php:194
+msgid "Search Courses Disciplines"
+msgstr ""
+
+#: core/includes/theme-init.php:195
+msgid "All Courses Disciplines"
+msgstr ""
+
+#: core/includes/theme-init.php:196
+msgid "Parent Course Discipline"
+msgstr ""
+
+#: core/includes/theme-init.php:197
+msgid "Edit Course Disicipline"
+msgstr ""
+
+#: core/includes/theme-init.php:198
+msgid "Update Course Discipline"
+msgstr ""
+
+#: core/includes/theme-init.php:199
+msgid "Add New Course Discipline"
+msgstr ""
+
+#: core/includes/theme-init.php:213 core/includes/theme-init.php:221
+msgid "Courses Campus"
+msgstr ""
+
+#: core/includes/theme-init.php:214
+msgid "Course Campus"
+msgstr ""
+
+#: core/includes/theme-init.php:215
+msgid "Search Courses Campus"
+msgstr ""
+
+#: core/includes/theme-init.php:216
+msgid "All Courses Campus"
+msgstr ""
+
+#: core/includes/theme-init.php:217
+msgid "Parent Course Campus"
+msgstr ""
+
+#: core/includes/theme-init.php:218
+msgid "Edit Course Campus"
+msgstr ""
+
+#: core/includes/theme-init.php:219
+msgid "Update Course Campus"
+msgstr ""
+
+#: core/includes/theme-init.php:220
+msgid "Add New Course Campus"
+msgstr ""
+
+#: core/includes/theme-init.php:234 core/includes/theme-init.php:242
+msgid "Courses Level"
+msgstr ""
+
+#: core/includes/theme-init.php:235
+msgid "Course Level"
+msgstr ""
+
+#: core/includes/theme-init.php:236
+msgid "Search Courses Level"
+msgstr ""
+
+#: core/includes/theme-init.php:237
+msgid "All Courses Level"
+msgstr ""
+
+#: core/includes/theme-init.php:238
+msgid "Parent Course Level"
+msgstr ""
+
+#: core/includes/theme-init.php:239
+msgid "Edit Course Level"
+msgstr ""
+
+#: core/includes/theme-init.php:240
+msgid "Update Course Level"
+msgstr ""
+
+#: core/includes/theme-init.php:241
+msgid "Add New Course Level"
+msgstr ""
+
+#: core/includes/theme-init.php:265 core/includes/theme-init.php:273
+#: core/includes/theme-init.php:278
+msgid "Professors"
+msgstr ""
+
+#: core/includes/theme-init.php:266
+msgid "Professor"
+msgstr ""
+
+#: core/includes/theme-init.php:267
+msgid "Search Professors"
+msgstr ""
+
+#: core/includes/theme-init.php:268
+msgid "All Professors"
+msgstr ""
+
+#: core/includes/theme-init.php:269
+msgid "Parent Professor"
+msgstr ""
+
+#: core/includes/theme-init.php:270
+msgid "Edit Professor"
+msgstr ""
+
+#: core/includes/theme-init.php:271
+msgid "Update Professor"
+msgstr ""
+
+#: core/includes/theme-init.php:272
+msgid "Add New Professor"
+msgstr ""
+
+#: core/includes/theme-init.php:311 core/includes/theme-init.php:319
+#: core/includes/theme-init.php:324
+#: core/includes/widgets/core-testimonials.php:25
+msgid "Testimonials"
+msgstr ""
+
+#: core/includes/theme-init.php:312
+msgid "Testimonial"
+msgstr ""
+
+#: core/includes/theme-init.php:313
+msgid "Search Testimonials"
+msgstr ""
+
+#: core/includes/theme-init.php:314
+msgid "All Testimonials"
+msgstr ""
+
+#: core/includes/theme-init.php:315
+msgid "Parent Testimonial"
+msgstr ""
+
+#: core/includes/theme-init.php:316
+msgid "Edit Testimonial"
+msgstr ""
+
+#: core/includes/theme-init.php:317
+msgid "Update Testimonial"
+msgstr ""
+
+#: core/includes/theme-init.php:318
+msgid "Add New Testimonial"
+msgstr ""
+
+#: core/includes/theme-init.php:357 core/includes/theme-init.php:358
+#: core/includes/theme-init.php:365 core/includes/theme-init.php:370
+msgid "Gallery"
+msgstr ""
+
+#: core/includes/theme-init.php:359
+msgid "Search Gallery Item"
+msgstr ""
+
+#: core/includes/theme-init.php:360
+msgid "All Gallery Items"
+msgstr ""
+
+#: core/includes/theme-init.php:361
+msgid "Parent Gallery Item"
+msgstr ""
+
+#: core/includes/theme-init.php:363
+msgid "Update Gallery Item"
+msgstr ""
+
+#: core/includes/theme-init.php:364
+msgid "Add New Gallery Item"
+msgstr ""
+
+#: core/includes/theme-init.php:399
+msgid "Gallery Categories"
+msgstr ""
+
+#: core/includes/theme-init.php:400
+msgid "Gallery Category"
+msgstr ""
+
+#: core/includes/theme-init.php:401
+msgid "Search Gallery Category Items"
+msgstr ""
+
+#: core/includes/theme-init.php:402
+msgid "All Gallery Category Items"
+msgstr ""
+
+#: core/includes/theme-init.php:403
+msgid "Parent Gallery Category"
+msgstr ""
+
+#: core/includes/theme-init.php:404
+msgid "Edit Gallery Category Item"
+msgstr ""
+
+#: core/includes/theme-init.php:405
+msgid "Update Gallery Category Item"
+msgstr ""
+
+#: core/includes/theme-init.php:406
+msgid "Add New Gallery Category Item"
+msgstr ""
+
+#: core/includes/theme-init.php:407
+msgid "Galery Categories"
+msgstr ""
+
+#: core/includes/widgets/contact.php:16
+msgid "Display your Contact Informations"
+msgstr ""
+
+#: core/includes/widgets/contact.php:18
+msgid "minti.Contact"
+msgstr ""
+
+#: core/includes/widgets/contact.php:36
+msgid "Phone"
+msgstr ""
+
+#: core/includes/widgets/contact.php:40
+msgid "Fax"
+msgstr ""
+
+#: core/includes/widgets/contact.php:44
+msgid "E-Mail"
+msgstr ""
+
+#: core/includes/widgets/contact.php:48
+msgid "Web"
+msgstr ""
+
+#: core/includes/widgets/core-flickr.php:16
+msgid "Display your latest Flickr Photos"
+msgstr ""
+
+#: core/includes/widgets/core-flickr.php:18
+msgid "Core Flickr"
+msgstr ""
+
+#: core/includes/widgets/core-flickr.php:63
+msgid "Flickr idGettr"
+msgstr ""
+
+#: core/includes/widgets/core-latest-events.php:19
+msgid "Display Latest Events"
+msgstr ""
+
+#: core/includes/widgets/core-latest-events.php:25
+msgid "Upcoming Events"
+msgstr ""
+
+#: core/includes/widgets/core-latest-events.php:29
+#: core/includes/widgets/core-recent-posts.php:29
+#: core/includes/widgets/core-testimonials.php:29
+msgid "Title"
+msgstr ""
+
+#: core/includes/widgets/core-latest-events.php:33
+#: core/includes/widgets/core-recent-posts.php:33
+#: core/includes/widgets/core-testimonials.php:33
+msgid "Numbers of item to show:"
+msgstr ""
+
+#: core/includes/widgets/core-latest-events.php:91 page-events-grid.php:39
+#: page-events-list.php:39
+msgid "Location Not Set"
+msgstr ""
+
+#: core/includes/widgets/core-recent-posts.php:19
+msgid "Display Recent Posts"
+msgstr ""
+
+#: core/includes/widgets/core-recent-posts.php:25
+msgid "Latest News"
+msgstr ""
+
+#: core/includes/widgets/core-recent-posts.php:84
+msgid "With"
+msgstr ""
+
+#: core/includes/widgets/core-recent-posts.php:85 single.php:33
+msgid "No Comments"
+msgstr ""
+
+#: core/includes/widgets/core-recent-posts.php:85 single.php:33
+msgid "One Comment "
+msgstr ""
+
+#: core/includes/widgets/core-recent-posts.php:85 single.php:33
+msgid "% Comments"
+msgstr ""
+
+#: core/includes/widgets/core-testimonials.php:19
+msgid "Display Latest Testimonials"
+msgstr ""
+
+#: course-search-results.php:78 page-courses.php:71
+msgid "Save"
+msgstr ""
+
+#: course-search-results.php:110 index.php:52 page-contact.php:50
+#: page-fullwidth.php:22 page-home.php:44 page.php:31 search.php:53
+#: single-course.php:39 single-event.php:82 single.php:54
+msgid "No posts found."
+msgstr ""
+
+#: course-search.php:6
+msgid "Find a course"
+msgstr ""
+
+#: index.php:41 search.php:42
+msgid " With "
+msgstr ""
+
+#: options.php:32
+msgid "Fullwidth Layout"
+msgstr ""
+
+#: options.php:33
+msgid "Boxed Layout"
+msgstr ""
+
+#: options.php:38 page-gallery.php:47
+msgid "Default"
+msgstr ""
+
+#: options.php:39
+msgid "Brown"
+msgstr ""
+
+#: options.php:40
+msgid "Red"
+msgstr ""
+
+#: options.php:41
+msgid "Violet"
+msgstr ""
+
+#: options.php:47 options.php:53 options.php:59 options.php:65 options.php:72
+msgid "No"
+msgstr ""
+
+#: options.php:48 options.php:54 options.php:60 options.php:66 options.php:71
+msgid "Yes"
+msgstr ""
+
+#: options.php:77
+msgid "French Toast"
+msgstr ""
+
+#: options.php:78
+msgid "Pancake"
+msgstr ""
+
+#: options.php:79
+msgid "Omelette"
+msgstr ""
+
+#: options.php:80
+msgid "Crepe"
+msgstr ""
+
+#: options.php:81
+msgid "Waffle"
+msgstr ""
+
+#: options.php:140
+msgid "General"
+msgstr ""
+
+#: options.php:144
+msgid "Logo & Favicon"
+msgstr ""
+
+#: options.php:150
+msgid "Upload Logo (Optional)"
+msgstr ""
+
+#: options.php:151 options.php:158
+msgid ""
+"Click Upload or Enter the direct path to your <strong>logo image</strong>. "
+"For example <em>http://your_website_url_here/wp-content/themes/theme_folder/"
+"images/logo.png</em>"
+msgstr ""
+
+#: options.php:157
+msgid "Upload Logo Retina"
+msgstr ""
+
+#: options.php:164
+msgid "Upload Favicon (16x16)"
+msgstr ""
+
+#: options.php:165
+msgid ""
+"Click Upload or Enter the direct path to your <strong>favicon</strong>. For "
+"example <em>http://your_website_url_here/wp-content/themes/theme_folder/"
+"favicon.ico</em>"
+msgstr ""
+
+#: options.php:171
+msgid "Apple Touch Icon (72x72)"
+msgstr ""
+
+#: options.php:172
+msgid ""
+"Click Upload or Enter the direct path to your <strong>Apple Touch Icon</"
+"strong>. For example <em>http://your_website_url_here/wp-content/themes/"
+"theme_folder/apple-touch-icon-72.png</em>"
+msgstr ""
+
+#: options.php:178
+msgid "Apple Touch Icon (114x114)"
+msgstr ""
+
+#: options.php:179
+msgid ""
+"Click Upload or Enter the direct path to your <strong>Apple Touch Icon</"
+"strong>. For example <em>http://your_website_url_here/wp-content/themes/"
+"theme_folder/apple-touch-icon-114.png</em>"
+msgstr ""
+
+#: options.php:185
+msgid "Apple Touch Icon (144x144)"
+msgstr ""
+
+#: options.php:186
+msgid ""
+"Click Upload or Enter the direct path to your <strong>Apple Touch Icon</"
+"strong>. For example <em>http://your_website_url_here/wp-content/themes/"
+"theme_folder/apple-touch-icon-144.png</em>"
+msgstr ""
+
+#: options.php:192
+msgid "Social Icons"
+msgstr ""
+
+#: options.php:197
+msgid "Facebook URL"
+msgstr ""
+
+#: options.php:198
+msgid "Paste here your Facebook URL"
+msgstr ""
+
+#: options.php:204
+msgid "Twitter URL"
+msgstr ""
+
+#: options.php:205
+msgid "Paste here your Twitter URL"
+msgstr ""
+
+#: options.php:211
+msgid "Pinterest URL"
+msgstr ""
+
+#: options.php:212
+msgid "Paste here your Pinterest URL"
+msgstr ""
+
+#: options.php:218
+msgid "Google+ URL"
+msgstr ""
+
+#: options.php:219
+msgid "Paste here your Google+ URL"
+msgstr ""
+
+#: options.php:225
+msgid "Youtube URL"
+msgstr ""
+
+#: options.php:226
+msgid "Paste here your Youtube URL"
+msgstr ""
+
+#: options.php:232
+msgid "Linkedin URL"
+msgstr ""
+
+#: options.php:233
+msgid "Paste here your Linkedin URL"
+msgstr ""
+
+#: options.php:239
+msgid "Instagram URL"
+msgstr ""
+
+#: options.php:240
+msgid "Paste here your Instagram URL"
+msgstr ""
+
+#: options.php:246
+msgid "Apple URL"
+msgstr ""
+
+#: options.php:247
+msgid "Paste here your Apple URL"
+msgstr ""
+
+#: options.php:253
+msgid "Show RSS Icon?"
+msgstr ""
+
+#: options.php:254
+msgid "Check to show RSS icon on header/footer."
+msgstr ""
+
+#: options.php:260
+msgid "Sponsors"
+msgstr ""
+
+#: options.php:265
+msgid "Show Sponsors Section"
+msgstr ""
+
+#: options.php:266
+msgid "Check to show sponsor section on homepage."
+msgstr ""
+
+#: options.php:272
+msgid "Upload Sponsor Image 1"
+msgstr ""
+
+#: options.php:273 options.php:280 options.php:287 options.php:294
+#: options.php:301
+msgid "Click Upload or Enter the direct path to your sponsor image"
+msgstr ""
+
+#: options.php:279
+msgid "Upload Sponsor Image 2"
+msgstr ""
+
+#: options.php:286
+msgid "Upload Sponsor Image 3"
+msgstr ""
+
+#: options.php:293
+msgid "Upload Sponsor Image 4"
+msgstr ""
+
+#: options.php:300
+msgid "Upload Sponsor Image 5"
+msgstr ""
+
+#: options.php:307
+msgid "Contact Page Map"
+msgstr ""
+
+#: options.php:312
+msgid "Google Maps Latitude Coords"
+msgstr ""
+
+#: options.php:313
+msgid ""
+"Paste here the latitude info of your map. For example: <em>-12.8809532</em>"
+msgstr ""
+
+#: options.php:319
+msgid "Google Maps Longitude Coords"
+msgstr ""
+
+#: options.php:320
+msgid ""
+"Paste here the longitude info of your map. For example: <em>-38.4174871</em>"
+msgstr ""
+
+#: options.php:326
+msgid "Code Integration"
+msgstr ""
+
+#: options.php:331
+msgid "Google Analytics Code"
+msgstr ""
+
+#: options.php:332
+msgid ""
+"You can paste your Google Analytics or other tracking code in this box. This "
+"will be automatically added to the footer."
+msgstr ""
+
+#: options.php:339
+msgid "Layout"
+msgstr ""
+
+#: options.php:353
+msgid "Enable Author Bio on Blog Pages"
+msgstr ""
+
+#: options.php:354
+msgid "Check to enable author bio on blog pages."
+msgstr ""
+
+#: options.php:361
+msgid "Header"
+msgstr ""
+
+#: options.php:397
+msgid "Phone Info"
+msgstr ""
+
+#: options.php:398
+msgid ""
+"Type here your phone info. It will be showed only if <strong>Display Header "
+"Info</strong> is marked as yes."
+msgstr ""
+
+#: options.php:404
+msgid "Mail Info"
+msgstr ""
+
+#: options.php:405
+msgid ""
+"Type here your mail info. It will be showed only if <strong>Display Header "
+"Info</strong> is marked as yes."
+msgstr ""
+
+#: options.php:412
+msgid "Footer"
+msgstr ""
+
+#: options.php:432
+msgid "Typography"
+msgstr ""
+
+#: options.php:500
+msgid "Styling"
+msgstr ""
+
+#: options.php:504 options.php:510
+msgid "Predefined Color Scheme"
+msgstr ""
+
+#: options.php:511
+msgid "Choose a predefined color scheme."
+msgstr ""
+
+#: options.php:559 options.php:563
+msgid "Custom CSS"
+msgstr ""
+
+#: options.php:564
+msgid "Advanced CSS Options. Paste your CSS Code."
+msgstr ""
+
+#: page-archives.php:26
+msgid "Latest 10 Posts:"
+msgstr ""
+
+#: page-archives.php:33
+msgid "Archives by Month:"
+msgstr ""
+
+#: page-archives.php:37
+msgid "Archives by Categories"
+msgstr ""
+
+#: page-events-grid.php:46 page-events-list.php:46
+msgid "Date Not Set"
+msgstr ""
+
+#: page-events-grid.php:68 page-events-list.php:70
+msgid "View Details &rarr;"
+msgstr ""
+
+#: page-gallery.php:23
+msgid "Filter Controls"
+msgstr ""
+
+#: page-gallery.php:27
+msgid "Show All"
+msgstr ""
+
+#: page-gallery.php:43
+msgid "Sort Controls"
+msgstr ""
+
+#: page-gallery.php:48
+msgid "Ascending"
+msgstr ""
+
+#: page-gallery.php:49
+msgid "Descending"
+msgstr ""
+
+#: page-home.php:20
+msgid "Request Information"
+msgstr ""
+
+#: page-home.php:74
+msgid "Our Campus"
+msgstr ""
+
+#: searchform.php:12
+msgid "Search the site..."
+msgstr ""
+
+#: single-course.php:35
+msgid "Apply to this course"
+msgstr ""
+
+#: single.php:45
+msgid "Tags: "
+msgstr ""
