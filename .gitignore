@@ -1,11 +1,1 @@
-/*
-!/wp-content
-/wp-content/*
-!/wp-content/plugins
-/wp-content/plugins/*
-!/wp-content/plugins/curried-pasta
-!/wp-content/themes
-/wp-content/themes/*
-!/wp-content/themes/curried-pasta
-!/wp-content/themes/the-newswire
-!/wp-content/themes/the-newswire/*
+wp-config.php
