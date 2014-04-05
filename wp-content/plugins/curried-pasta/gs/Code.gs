@@ -61,6 +61,7 @@ function createCopy(gDocId, data) {
   var document = DocumentApp.openById(workingDoc.getId());
   var body = document.getBody();
   
+  // replace fields with user-provided values
   for (key in data) {
     if (key === 'callback' || key === '_' || key === 'gid' || key === 'method') continue;
     var search = "\\$\\{" + key.toUpperCase().replace(/_/g,' ') + "\\}";
@@ -69,7 +70,7 @@ function createCopy(gDocId, data) {
   
   document.saveAndClose();
   workingDoc.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
-    
+      
   authorize();
   var apiKey = 'AIzaSyDsLzopZdS7r57cQmyF9u7cNkUn6eXrEz4';
   var driveGetUrl = 'https://www.googleapis.com/drive/v2/files/' + workingDoc.getId() + '?key=' + apiKey;
