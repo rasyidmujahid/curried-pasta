@@ -1198,6 +1198,10 @@ msgstr ""
 msgid "Violet"
 msgstr ""
 
+#: options.php:42
+msgid "Yellow"
+msgstr ""
+
 #: options.php:47 options.php:53 options.php:59 options.php:65 options.php:72
 msgid "No"
 msgstr ""

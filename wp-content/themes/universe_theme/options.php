@@ -39,7 +39,7 @@ function optionsframework_options() {
 		'brown' => __('Brown', 'options_framework_theme'),
 		'red' => __('Red', 'options_framework_theme'),
 		'violet' => __('Violet', 'options_framework_theme'),
-		
+		'yellow' => __('Yellow', 'options_framework_theme'),
 	);
 
 	// Display search box in the header
