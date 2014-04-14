@@ -46,8 +46,10 @@ class Curry {
         $htmls = array();
 
         $method = 'open';
-        $google_doc_id = '1LCxqRRPChqg0zAnYnzhA36gR7ndAg1_M23nQH0XVCGM';
-        $url = "https://script.google.com/macros/s/AKfycbzggDVc5GFSNttaMkYU6pi8iy88exVSTiwyrKvwrr2nCj7m0rM/exec?method=". $method ."&gid=" . $google_doc_id;
+
+        $google_doc_id = $id;
+
+        $url = "https://script.google.com/macros/s/AKfycbwwYoxBOohaKW36y8uX6YvdE7GpkaYJL3aICBAU_aP57PI1oiE/exec?method=". $method ."&gid=" . $google_doc_id;
         
         $args_json = file_get_contents($url);
 
@@ -104,7 +106,6 @@ EOD;
         // $output = '<iframe src="https://docs.google.com/viewer?url=https://docs.google.com/document/d/'. $id .'/export?format%3Dpdf&id='. $id .'&embedded=true" style="width:680px; height:860px;" frameborder="0"></iframe>';
 
         return $output;
-        // return apply_filters('gdoc_output', $output);
     }
 
     public function underscored($string)

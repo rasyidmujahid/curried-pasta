@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
 
     jQuery("#doc_param").submit(function(event) {
         event.preventDefault();
-        var url = 'https://script.google.com/macros/s/AKfycbw6in0T7QsKHxJxgc5XJxNAy2XzHMGzfzfJBbatMDI/dev?method=create&';
+        var url = 'https://script.google.com/macros/s/AKfycbwYlpryNNsNHgQEwnxMjRBtKCKUlqlch6kTgWye-Mo/dev?method=create&';
         url += jQuery(this).serialize();
         // console.log("URL : " + url);
 
@@ -24,8 +24,8 @@ jQuery(document).ready(function() {
             url: url,
             dataType: "jsonp",
             success: function(json) {
-                // console.log("success : ");
-                // console.log(json);
+                console.log("success : ");
+                console.log(json);
 
                 jQuery("#curry-embedded-doc")[0].src = json.embed + "?embedded=true";
 
