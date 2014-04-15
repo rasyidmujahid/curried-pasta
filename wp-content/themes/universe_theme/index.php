@@ -19,7 +19,10 @@ get_header(); ?>
             <!-- Here begin Main Content -->
             <div id="ajax-container" class="col-md-8">
                 <div  class="row">
-                	<?php if(have_posts()) : while (have_posts()) : the_post(); ?>
+                	<?php $cat = get_category_by_slug('template-surat'); 
+            		query_posts('&cat=-' . $cat->term_id); 
+            	
+            		if(have_posts()) : while (have_posts()) : the_post(); ?>
 
                     <div class="post-item col-md-6 col-sm-6">
                     	<div <?php post_class();?>>
