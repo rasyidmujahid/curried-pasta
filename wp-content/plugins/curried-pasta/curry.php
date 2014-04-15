@@ -17,10 +17,7 @@ class Curry {
     protected $plugin_url;
 
     public function __construct(){
-        // $this->plugin_path = dirname(__FILE__);
-        // $this->plugin_url = WP_PLUGIN_URL . '/curried-pasta';
-        // wp_enqueue_script('curry_js', plugins_url('js/curry.js', __FILE__));
-
+        
         wp_enqueue_script("jquery");
         wp_enqueue_script("jqueryui");
         
@@ -49,7 +46,8 @@ class Curry {
 
         $google_doc_id = $id;
 
-        $url = "https://script.google.com/macros/s/AKfycbwwYoxBOohaKW36y8uX6YvdE7GpkaYJL3aICBAU_aP57PI1oiE/exec?method=". $method ."&gid=" . $google_doc_id;
+        $url = "https://script.google.com/macros/s/AKfycbwwYoxBOohaKW36y8uX6YvdE7GpkaYJL3aICBAU_aP57PI1oiE/exec?method=" . 
+            $method ."&gid=" . $google_doc_id;
         
         $args_json = file_get_contents($url);
 
@@ -99,7 +97,8 @@ EOD;
         // $output = '<iframe src="https://docs.google.com/file/d/' . $id .'/preview" width="' . $width . '" height="'. $height .'"></iframe>';
 
         # google doc preview
-        $output = '<iframe id="curry-embedded-doc" src="https://docs.google.com/document/d/' . $id . '/preview?embedded=true" width="' . $width . 
+        $output = '<iframe id="curry-embedded-doc" src="https://docs.google.com/document/d/' . $id . 
+            '/preview?embedded=true" width="' . $width . 
             '" height="'. $height .'"></iframe>';
 
         # google doc viewer
