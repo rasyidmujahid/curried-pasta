@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Another Google Docs Shortcode
+Plugin Name: Document Template
 Plugin URI: https://github.com/rasyidmujahid/curried-pasta
-Description: Embed a Google Doc (only) into your blog posts
+Description: Create and download a document with provided template, just by filling required fields.
 Author: rasyidmujahid
 Author URI: https://github.com/rasyidmujahid/curried-pasta
 Version: 0.1
