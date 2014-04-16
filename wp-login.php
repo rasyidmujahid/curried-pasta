@@ -11,6 +11,10 @@
 /** Make sure that the WordPress bootstrap has run before continuing. */
 require( dirname(__FILE__) . '/wp-load.php' );
 
+//FIXME: do comment/remove these hack lines. (once the database is updated)
+// update_option('siteurl', 'http://localhost:8888/wp' );
+// update_option('home', 'http://localhost:8888/wp' );
+
 // Redirect to https login if forced to use SSL
 if ( force_ssl_admin() && ! is_ssl() ) {
 	if ( 0 === strpos($_SERVER['REQUEST_URI'], 'http') ) {
