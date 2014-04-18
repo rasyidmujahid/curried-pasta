@@ -48,8 +48,20 @@ class Curry {
 
         $url = "https://script.google.com/macros/s/AKfycbwwYoxBOohaKW36y8uX6YvdE7GpkaYJL3aICBAU_aP57PI1oiE/exec?method=" . 
             $method ."&gid=" . $google_doc_id;
+
+        $site_url = get_site_url();
+
+        if (strstr(get_site_url(), 'mech.eng.ui.ac.id')) {
+            $context_params = array(
+                'http' => array(
+                    'proxy' => 'tcp://152.118.148.7:3128',
+                    'request_fulluri' => true,
+                ),
+            );
+            $stream_context = stream_context_create($context_params);
+        }
         
-        $args_json = file_get_contents($url);
+        $args_json = file_get_contents($url, false, $stream_context);
 
         $htmls[] = $this->get_doc_fields($google_doc_id, json_decode($args_json, true));
 
