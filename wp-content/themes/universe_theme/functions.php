@@ -123,3 +123,19 @@ jQuery(document).ready(function() {
 
 <?php
 }
+
+/*
+ * Add login/logout link into menu
+ */
+
+add_filter('wp_nav_menu_items', 'add_login_logout_link', 10, 2);
+function add_login_logout_link($items, $args) {
+	if( $args->theme_location == 'header_menu_primary' ) {
+		ob_start();
+        wp_loginout('index.php');
+        $loginoutlink = ob_get_contents();
+        ob_end_clean();
+        $items .= '<li>'. $loginoutlink .'</li>';
+    }
+    return $items;
+}
