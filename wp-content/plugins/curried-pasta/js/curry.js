@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
 
     jQuery("#doc_param").submit(function(event) {
         event.preventDefault();
-        var url = 'https://script.google.com/macros/s/AKfycbwYlpryNNsNHgQEwnxMjRBtKCKUlqlch6kTgWye-Mo/dev?method=create&';
+        var url = 'https://script.google.com/macros/s/AKfycbwwYoxBOohaKW36y8uX6YvdE7GpkaYJL3aICBAU_aP57PI1oiE/exec?method=create&';
         url += jQuery(this).serialize();
         // console.log("URL : " + url);
 
