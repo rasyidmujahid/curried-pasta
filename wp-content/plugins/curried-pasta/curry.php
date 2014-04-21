@@ -10,7 +10,6 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-
 class Curry {
 
     protected $plugin_path;
@@ -66,12 +65,22 @@ class Curry {
 
         $content_html = file_get_contents($json_data['html'], false, $stream_context);
         
-        $htmls[] = $this->get_doc_fields($google_doc_id, $json_data['fields']);
-        // $htmls[] = '<div id="google_doc_html">' . $content_html . '</div>';
+        $cleaned_content = $this->get_cleaned_content($content_html);
+        
+        // $htmls[] = $this->get_doc_fields($google_doc_id, $json_data['fields']);
+        $htmls[] = '<div id="google_doc_html">' . $cleaned_content . '</div>';
 
-        $htmls[] = $this->get_embedded_doc($id, $width, $height);
+        // $htmls[] = $this->get_embedded_doc($id, $width, $height);
 
         return apply_filters('gdoc_output', implode("\n", $htmls));
+    }
+
+    public function get_cleaned_content($content_html)
+    {
+        $p = str_replace('}p{', '}#google_doc_html > p{', $content_html);
+        $p = str_replace('}li{', '}#google_doc_html > li{', $p);
+        $p = str_replace('<style type="text/css">', '<style type="text/css"> table, th, td { border: 0px solid rgba(0, 0, 0, 0.1) } ', $p);
+        return $p;
     }
 
     public function get_doc_fields($google_doc_id, $fields)
