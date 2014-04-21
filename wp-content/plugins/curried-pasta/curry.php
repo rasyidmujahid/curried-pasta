@@ -65,68 +65,53 @@ class Curry {
 
         $content_html = file_get_contents($json_data['html'], false, $stream_context);
         
-        $cleaned_content = $this->get_cleaned_content($content_html);
+        $content = $this->build_inlined_fields_form($content_html, $google_doc_id, $json_data['fields']);
         
-        $htmls[] = '<div id="google_doc_html">' . $cleaned_content . '</div>';
+        $htmls[] = '<div id="google_doc_html">' . $content . '</div>';
 
         return apply_filters('gdoc_output', implode("\n", $htmls));
     }
 
     public function get_cleaned_content($content_html)
     {
-        $p = str_replace('}p{', '}#google_doc_html > p{', $content_html);
-        $p = str_replace('}li{', '}#google_doc_html > li{', $p);
+        $p = str_replace('}p{', '}#doc_param > fieldset > p{', $content_html);
+        $p = str_replace('}li{', '}#doc_param > fieldset > li{', $p);
         $p = str_replace('<style type="text/css">', '<style type="text/css"> table, th, td { border: 0px solid rgba(0, 0, 0, 0.1) } ', $p);
         return $p;
     }
 
-    public function get_doc_fields($google_doc_id, $fields)
+    public function build_inlined_fields_form($content_html, $google_doc_id, $fields)
     {
-        $inputs = array();
+        $content = $this->get_cleaned_content($content_html);
+        
         foreach ($fields as $field) {
-            $inputs[] = $this->new_text_field(ucwords(strtolower($field['tag_string'])), $this->underscored($field['tag_id']));
+            $field_id = $field['tag_id'];
+            $input_field = $this->build_field_input(ucwords(strtolower($field['tag_string'])), $this->underscored($field_id));
+            $content = str_replace($field_id, $input_field, $content);
         }
-        $inputs = implode("\n", $inputs);
 
         $htmls = <<<EOD
-            <form id="doc_param" method="post" class="pure-form pure-form-aligned">
+            <form id="doc_param" method="post">
                 <fieldset>
                 <input type="hidden" name="gid" id="gid" value="$google_doc_id"/>
-                $inputs
+                $content
+                <br/>
                 <div id="curry-button" class="pure-controls">
-                    <button id="curry-button-submit" type="submit" class="pure-button pure-button-primary">Submit</button>
+                    <button id="curry-button-submit" type="submit" class="pure-button pure-button-primary">SUBMIT</button>
                 </div>
                 </fieldset>
             </form>
 EOD;
+
         return $htmls;
+        
     }
 
-    public function new_text_field($title, $id)
+    public function build_field_input($title, $id)
     {
         return <<<EOD
-        <div class="pure-control-group">
-            <label for=$id>$title</label><input type="text" id=$id name=$id placeholder="$title"/>
-        </div>
+        <input type="text" id=$id name=$id placeholder="$title" style="width: 170px"/>
 EOD;
-    }
-
-    public function get_embedded_doc($id, $width, $height)
-    {
-        if (!$id) return;
-
-        # docx
-        // $output = '<iframe src="https://docs.google.com/file/d/' . $id .'/preview" width="' . $width . '" height="'. $height .'"></iframe>';
-
-        # google doc preview
-        $output = '<iframe id="curry-embedded-doc" src="https://docs.google.com/document/d/' . $id . 
-            '/preview?embedded=true" width="' . $width . 
-            '" height="'. $height .'"></iframe>';
-
-        # google doc viewer
-        // $output = '<iframe src="https://docs.google.com/viewer?url=https://docs.google.com/document/d/'. $id .'/export?format%3Dpdf&id='. $id .'&embedded=true" style="width:680px; height:860px;" frameborder="0"></iframe>';
-
-        return $output;
     }
 
     public function underscored($string)
