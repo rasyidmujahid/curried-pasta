@@ -67,7 +67,6 @@ class Curry {
         $content_html = file_get_contents($json_data['html'], false, $stream_context);
         
         $htmls[] = $this->get_doc_fields($google_doc_id, $json_data['fields']);
-        // $htmls[] = '<div id="google_doc_html">' . $content_html . '</div>';
 
         $htmls[] = $this->get_embedded_doc($id, $width, $height);
 
