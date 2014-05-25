@@ -21,7 +21,6 @@ body,
 .widget-inner,
 .page-title,
 .grid-event-header,
-.load-more-btn,
 .event-container,
 .gallery-content,
 .blog-post-inner,
@@ -35,6 +34,7 @@ body,
   background-color: white;
 }
 
+.load-more-btn,
 .box-content-inner,
 .widget-main-title,
 .widget-main {
