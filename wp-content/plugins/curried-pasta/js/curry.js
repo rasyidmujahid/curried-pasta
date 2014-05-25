@@ -27,8 +27,6 @@ jQuery(document).ready(function() {
                 console.log("success : ");
                 console.log(json);
 
-                jQuery("#curry-embedded-doc")[0].src = json.embed + "?embedded=true";
-
                 var ahref_pdf = '<a id="curry-link-pdf" class="pure-button pure-button-primary">Download PDF</a>';
                 // var button_cetak_pdf = '<a id="curry-button-cetak" class="pure-button pure-button-primary">Cetak</a>';
                 jQuery("#curry-button").append(ahref_pdf);
