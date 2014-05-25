@@ -4,11 +4,9 @@ jQuery(document).ready(function() {
         event.preventDefault();
         var url = 'https://script.google.com/macros/s/AKfycbwwYoxBOohaKW36y8uX6YvdE7GpkaYJL3aICBAU_aP57PI1oiE/exec?method=create&';
         url += jQuery(this).serialize();
-        // console.log("URL : " + url);
 
         css_load(true);
 
-        // jQuery("#curry-button-submit").remove();
         jQuery("#curry-button-submit").addClass("pure-button-disabled");
         jQuery("#curry-button-submit").attr('disabled', 'disabled');
         jQuery("#curry-button-submit").text("Loading..");
@@ -28,9 +26,7 @@ jQuery(document).ready(function() {
                 console.log(json);
 
                 var ahref_pdf = '<a id="curry-link-pdf" class="pure-button pure-button-primary">Download PDF</a>';
-                // var button_cetak_pdf = '<a id="curry-button-cetak" class="pure-button pure-button-primary">Cetak</a>';
                 jQuery("#curry-button").append(ahref_pdf);
-                // jQuery("#curry-button").append(button_cetak_pdf);
 
                 jQuery("#curry-link-pdf").click(function() {
                     window.open(json.pdf);
@@ -39,20 +35,14 @@ jQuery(document).ready(function() {
                 jQuery("#curry-button-cetak").click(function() {
                     jQuery("#curry-embedded-doc")[0].focus();
                     jQuery("#curry-embedded-doc")[0].contentWindow.print();
-
-                    // var cetak_window = window.open(json.embed);
                 });
 
                 jQuery("#curry-button-submit").remove();
-                // jQuery("#curry-button-submit").removeClass("pure-button-disabled");
-                // jQuery("#curry-button-submit").removeAttr('disabled');
                 css_load(false);
             },
             error: function() {
                 alert("Error");
                 jQuery("#curry-button-submit").remove();
-                // jQuery("#curry-button-submit").removeClass("pure-button-disabled");
-                // jQuery("#curry-button-submit").removeAttr('disabled');
                 css_load(false);
             }
         };
