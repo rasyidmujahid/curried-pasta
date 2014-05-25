@@ -18,8 +18,7 @@ body,
 
 .main-slideshow,
 .widget-item,
-.widget-main,
-.box-content-inner,
+.widget-inner,
 .page-title,
 .grid-event-header,
 .load-more-btn,
@@ -28,13 +27,19 @@ body,
 .blog-post-inner,
 .prev-next-post a,
 #blog-author,
-.widget-main-title,
 .blog-comments-content,
 .contact-page-content,
 .contact-map,
 .course-details,
 #disqus_thread {
   background-color: white;
+}
+
+.box-content-inner,
+.widget-main-title,
+.widget-main {
+  background-color: #2D353F;
+  /*background-color: white;*/
 }
 
 .menu-toggle-btn {
@@ -63,19 +68,19 @@ body,
 .social_icons li a,
 .footer-media-icons li a,
 .flex-direction-nav a {
-  background-color: #fcda00;
+  background-color: #2D353F;
 }
 
 .main-navigation,
 .site-footer {
-  background-color: #004884;
+  background-color: #132D50;
 }
 
 blockquote,
 .calendar-small,
 .course-list > dt:nth-child(odd),
 .tab-content > .tab-pane {
-  background-color: #f3f3f3;
+  background-color: #E2DCDC;
 }
 
 .s-month,
@@ -183,10 +188,13 @@ h1, h2, h3, h4, h5, h6,
 .dark-text,
 .page-title a,
 .s-date,
-.load-more-btn a,
 .mixitup-controls .active,
 .prev-next-post a {
   color: #282a2c;
+}
+
+.load-more-btn a {
+  color: #8ab5d6;;
 }
 
 .small-text,
@@ -232,7 +240,7 @@ blockquote,
 .search-form form input,
 .main-navigation,
 .main-menu li {
-  border-color: #00569d;
+  border-color: #09325E;
 }
 
 .main-menu li ul li {
@@ -306,10 +314,13 @@ body,
 
 .sidebar .tagcloud a,
 .footer-widget .tagcloud a {
-	 background-color: #003a6a;	
+	background-color: #003a6a;	
 }
 
-
 .mainBtn, .request-information .submit_field .mainBtn, .mc_signup_submit .button {
-	  background-color: #003a6a;
+	 background-color: #003a6a;
+}
+
+.widget-title {
+  color: #8ab5d6;
 }

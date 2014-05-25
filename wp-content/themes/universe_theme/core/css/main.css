@@ -575,9 +575,9 @@ input, select {
 .event-small-title a,
 .event-title a,
 .gallery-title  {
-  font-family: Helvetica, Arial, sans-serif;
+  /*font-family: Helvetica, Arial, sans-serif;*/
   line-height: 22px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
 }
 
