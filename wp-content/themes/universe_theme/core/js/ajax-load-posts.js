@@ -97,7 +97,7 @@ core_getposts();
 
 									} else {
 	
-										jQuery('.load-more-text').text('No more itens to show');
+										jQuery('.load-more-text').text('No more items to show');
 
 									}
  
