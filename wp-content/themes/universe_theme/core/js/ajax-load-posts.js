@@ -85,7 +85,7 @@ core_getposts();
 
 									// Update page number and nextLink.
 									pageNum++;
-									nextLink = nextLink.replace(/\/page\/[0-9]?/, '/page/'+ pageNum);
+									nextLink = nextLink.replace(/paged=[0-9]?/, 'paged='+ pageNum);
 									jQuery('#load-more')
 										.before('<div id="ajax-container-new-'+pageNum+ '"class="row"></div>');
 									
